@@ -16,22 +16,28 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
-  @override
+
+   @override
   Widget build(BuildContext context) {
+
+     var leftDiceNumber = 5;
+
     return Center(
       child: Row(
         children: <Widget>[
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: FlatButton(
-                child: Image.asset('images/dice1.png'),
-              ),
+            child: FlatButton(
+              onPressed: () {
+                print('Left Button got pressed');
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
+            child: FlatButton(
+              onPressed: () {
+                print('Right Button got pressed');
+              },
               child: Image.asset('images/dice3.png'),
             ),
           ),
